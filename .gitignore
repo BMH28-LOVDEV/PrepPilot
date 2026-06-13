@@ -17,3 +17,6 @@ xcuserdata/
 .env
 
 .env
+
+.env
+backend/.env
