@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: preppilot-api
+    env: node
+    plan: starter
+    branch: main
+    rootDir: server
+    buildCommand: npm ci
+    startCommand: node index.js
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: CLIENT_API_KEY
+        generateValue: true
