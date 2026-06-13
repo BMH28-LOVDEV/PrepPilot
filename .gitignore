@@ -11,3 +11,5 @@ xcuserdata/
 .build/
 .swiftpm/
 !Package.resolved
+
+.env
