@@ -7,7 +7,27 @@
 		<key>PrepPilot.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PrepPilotWidgetsExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9C7F92662FD1482C001A8E1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C9617CB2FD67FA3005BD21A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

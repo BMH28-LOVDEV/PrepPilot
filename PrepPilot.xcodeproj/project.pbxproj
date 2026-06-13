@@ -6,14 +6,110 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9C9617CF2FD67FA3005BD21A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9617CE2FD67FA3005BD21A /* WidgetKit.framework */; };
+		9C9617D12FD67FA3005BD21A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9617D02FD67FA3005BD21A /* SwiftUI.framework */; };
+		9C9617E22FD67FA4005BD21A /* PrepPilotWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C9617CC2FD67FA3005BD21A /* PrepPilotWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C9617E02FD67FA4005BD21A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C7F925F2FD1482C001A8E1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9617CB2FD67FA3005BD21A;
+			remoteInfo = PrepPilotWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C9617E72FD67FA4005BD21A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C9617E22FD67FA4005BD21A /* PrepPilotWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9C7F92672FD1482C001A8E1F /* PrepPilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrepPilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9617CC2FD67FA3005BD21A /* PrepPilotWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PrepPilotWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9617CE2FD67FA3005BD21A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9C9617D02FD67FA3005BD21A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9C9617C62FD14D94005BD21A /* Exceptions for "PrepPilot" folder in "PrepPilot" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Models/StudyModels.swift,
+				Services/AppEnvironment.swift,
+				Services/AudioRecorderService.swift,
+				Services/CloudSyncService.swift,
+				Services/SpeechTranscriptionService.swift,
+				Services/StudyAIService.swift,
+				Services/SubscriptionStore.swift,
+				Support/DesignSystem.swift,
+				Support/Haptics.swift,
+				Support/Navigation.swift,
+				Support/PrepPilotSchema.swift,
+				Support/PreviewData.swift,
+				ViewModels/ChatViewModel.swift,
+				ViewModels/DashboardViewModel.swift,
+				ViewModels/FlashcardStudyViewModel.swift,
+				ViewModels/QuizSessionViewModel.swift,
+				ViewModels/RecordingViewModel.swift,
+				ViewModels/SearchViewModel.swift,
+				Views/Components/PremiumComponents.swift,
+				Views/Learning/AIChatView.swift,
+				Views/Learning/FlashcardView.swift,
+				Views/Learning/LectureDetailView.swift,
+				Views/Learning/NotesView.swift,
+				Views/Learning/QuizView.swift,
+				Views/Learning/RecordingView.swift,
+				Views/Learning/SearchView.swift,
+				Views/Learning/StudyGuideView.swift,
+				Views/Learning/TranscriptView.swift,
+				Views/Root/AuthenticationView.swift,
+				Views/Root/DashboardView.swift,
+				Views/Root/MainTabView.swift,
+				Views/Root/OnboardingView.swift,
+				Views/Root/PaywallView.swift,
+				Views/Root/ProfileView.swift,
+				Views/Root/SettingsView.swift,
+			);
+			target = 9C7F92662FD1482C001A8E1F /* PrepPilot */;
+		};
+		9C9617E62FD67FA4005BD21A /* Exceptions for "PrepPilotWidgets" folder in "PrepPilotWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9C9617CB2FD67FA3005BD21A /* PrepPilotWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9C7F92692FD1482C001A8E1F /* PrepPilot */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9C9617C62FD14D94005BD21A /* Exceptions for "PrepPilot" folder in "PrepPilot" target */,
+			);
 			path = PrepPilot;
+			sourceTree = "<group>";
+		};
+		9C9617D22FD67FA3005BD21A /* PrepPilotWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9C9617E62FD67FA4005BD21A /* Exceptions for "PrepPilotWidgets" folder in "PrepPilotWidgetsExtension" target */,
+			);
+			path = PrepPilotWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +122,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C9617C92FD67FA3005BD21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9617D12FD67FA3005BD21A /* SwiftUI.framework in Frameworks */,
+				9C9617CF2FD67FA3005BD21A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				9C7F92692FD1482C001A8E1F /* PrepPilot */,
+				9C9617D22FD67FA3005BD21A /* PrepPilotWidgets */,
+				9C9617CD2FD67FA3005BD21A /* Frameworks */,
 				9C7F92682FD1482C001A8E1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +148,18 @@
 			isa = PBXGroup;
 			children = (
 				9C7F92672FD1482C001A8E1F /* PrepPilot.app */,
+				9C9617CC2FD67FA3005BD21A /* PrepPilotWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9C9617CD2FD67FA3005BD21A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C9617CE2FD67FA3005BD21A /* WidgetKit.framework */,
+				9C9617D02FD67FA3005BD21A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +172,12 @@
 				9C7F92632FD1482C001A8E1F /* Sources */,
 				9C7F92642FD1482C001A8E1F /* Frameworks */,
 				9C7F92652FD1482C001A8E1F /* Resources */,
+				9C9617E72FD67FA4005BD21A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C9617E12FD67FA4005BD21A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9C7F92692FD1482C001A8E1F /* PrepPilot */,
@@ -69,6 +188,28 @@
 			productName = PrepPilot;
 			productReference = 9C7F92672FD1482C001A8E1F /* PrepPilot.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9C9617CB2FD67FA3005BD21A /* PrepPilotWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9617E32FD67FA4005BD21A /* Build configuration list for PBXNativeTarget "PrepPilotWidgetsExtension" */;
+			buildPhases = (
+				9C9617C82FD67FA3005BD21A /* Sources */,
+				9C9617C92FD67FA3005BD21A /* Frameworks */,
+				9C9617CA2FD67FA3005BD21A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9C9617D22FD67FA3005BD21A /* PrepPilotWidgets */,
+			);
+			name = PrepPilotWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = PrepPilotWidgetsExtension;
+			productReference = 9C9617CC2FD67FA3005BD21A /* PrepPilotWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +222,9 @@
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					9C7F92662FD1482C001A8E1F = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					9C9617CB2FD67FA3005BD21A = {
 						CreatedOnToolsVersion = 26.5;
 					};
 				};
@@ -100,12 +244,20 @@
 			projectRoot = "";
 			targets = (
 				9C7F92662FD1482C001A8E1F /* PrepPilot */,
+				9C9617CB2FD67FA3005BD21A /* PrepPilotWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9C7F92652FD1482C001A8E1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9617CA2FD67FA3005BD21A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +274,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C9617C82FD67FA3005BD21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C9617E12FD67FA4005BD21A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9617CB2FD67FA3005BD21A /* PrepPilotWidgetsExtension */;
+			targetProxy = 9C9617E02FD67FA4005BD21A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9C7F92702FD1482D001A8E1F /* Debug */ = {
@@ -254,6 +421,10 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrepPilot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PrepPilot uses the camera to capture note photos and turn them into study materials.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PrepPilot records lecture audio to create transcripts and study materials.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "PrepPilot transcribes lecture audio to generate notes, flashcards, quizzes, and study guides.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -298,6 +469,10 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrepPilot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PrepPilot uses the camera to capture note photos and turn them into study materials.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PrepPilot records lecture audio to create transcripts and study materials.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "PrepPilot transcribes lecture audio to generate notes, flashcards, quizzes, and study guides.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -329,6 +504,71 @@
 			};
 			name = Release;
 		};
+		9C9617E42FD67FA4005BD21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JUK8MNWQ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrepPilotWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PrepPilotWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmh.PrepPilot.PrepPilotWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C9617E52FD67FA4005BD21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JUK8MNWQ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PrepPilotWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PrepPilotWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmh.PrepPilot.PrepPilotWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -346,6 +586,15 @@
 			buildConfigurations = (
 				9C7F92732FD1482D001A8E1F /* Debug */,
 				9C7F92742FD1482D001A8E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9617E32FD67FA4005BD21A /* Build configuration list for PBXNativeTarget "PrepPilotWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9617E42FD67FA4005BD21A /* Debug */,
+				9C9617E52FD67FA4005BD21A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
