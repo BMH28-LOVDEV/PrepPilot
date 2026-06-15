@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: preppilot-backend
+    env: docker
+    plan: starter
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    dockerfilePath: Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: CLIENT_API_KEY
+        sync: false
