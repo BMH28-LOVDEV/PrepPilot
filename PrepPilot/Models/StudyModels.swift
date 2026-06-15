@@ -9,7 +9,7 @@ enum LectureStatus: String, Codable, CaseIterable {
     case archived
 }
 
-enum QuizQuestionKind: String, Codable, CaseIterable {
+public enum QuizQuestionKind: String, Codable, CaseIterable {
     case multipleChoice
     case trueFalse
     case shortAnswer

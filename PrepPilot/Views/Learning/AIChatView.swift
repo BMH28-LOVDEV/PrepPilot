@@ -142,7 +142,7 @@ private struct MessageBubble: View {
 
 #Preview {
     NavigationStack {
-        AIChatView(lectureID: PreviewData.lectureID, aiService: MockStudyAIService())
+        AIChatView(lectureID: PreviewData.lectureID, aiService: AppEnvironment().aiService)
     }
     .modelContainer(PreviewData.container)
 }

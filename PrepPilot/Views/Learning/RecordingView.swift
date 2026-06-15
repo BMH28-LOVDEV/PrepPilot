@@ -169,7 +169,7 @@ struct RecordingView: View {
 
 #Preview {
     NavigationStack {
-        RecordingView(path: .constant(NavigationPath()), speechService: SpeechTranscriptionService(), aiService: MockStudyAIService())
+        RecordingView(path: .constant(NavigationPath()), speechService: SpeechTranscriptionService(), aiService: AppEnvironment().aiService)
     }
     .modelContainer(PreviewData.container)
 }

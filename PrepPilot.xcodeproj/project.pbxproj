@@ -53,7 +53,6 @@
 				Services/AudioRecorderService.swift,
 				Services/CloudSyncService.swift,
 				Services/SpeechTranscriptionService.swift,
-				Services/StudyAIService.swift,
 				Services/SubscriptionStore.swift,
 				Support/DesignSystem.swift,
 				Support/Haptics.swift,
