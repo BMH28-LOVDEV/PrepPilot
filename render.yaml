@@ -1,14 +1,19 @@
 services:
   - type: web
     name: preppilot-api
-    env: node
+    env: docker
     plan: starter
     branch: main
-    rootDir: server
-    buildCommand: npm ci
-    startCommand: node index.js
+    rootDir: .
+    dockerfilePath: Dockerfile
     healthCheckPath: /healthz
     autoDeploy: true
     envVars:
       - key: CLIENT_API_KEY
-        generateValue: true
+        sync: false
+      - key: APP_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
