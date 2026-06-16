@@ -653,6 +653,9 @@ struct BackendStudyAIService: StudyAIProviding {
 
     init(baseURL: URL = URL(string: "https://preppilot-official-dockersetup.onrender.com/api")!) {
         self.baseURL = baseURL
+        #if DEBUG
+        print("[BackendStudyAIService] Using base URL:", baseURL.absoluteString)
+        #endif
     }
 
     func generateNotes(from transcript: String, lectureTitle: String) async throws -> GeneratedNotes {
@@ -685,10 +688,18 @@ struct BackendStudyAIService: StudyAIProviding {
         request.setValue(Secrets.clientAPIKey, forHTTPHeaderField: "X-API-Key")
         request.httpBody = try encoder.encode(body)
 
+        #if DEBUG
+        print("[BackendStudyAIService] POST", request.url?.absoluteString ?? endpoint)
+        #endif
+
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NSError(domain: "PrepPilot.BackendAI", code: -1, userInfo: [NSLocalizedDescriptionKey: "Backend returned an invalid response."])
         }
+
+        #if DEBUG
+        print("[BackendStudyAIService] Status:", httpResponse.statusCode)
+        #endif
 
         guard (200..<300).contains(httpResponse.statusCode) else {
             let error = try? decoder.decode(BackendErrorResponse.self, from: data)
