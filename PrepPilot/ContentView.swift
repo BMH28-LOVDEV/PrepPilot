@@ -640,10 +640,18 @@ protocol StudyAIProviding {
 
 struct BackendStudyAIService: StudyAIProviding {
     private let baseURL: URL
-    private let encoder = JSONEncoder()
-    private let decoder = JSONDecoder()
+    private let encoder: JSONEncoder = {
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        return encoder
+    }()
+    private let decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
 
-    init(baseURL: URL = URL(string: "http://192.168.11.130:8787/api")!) {
+    init(baseURL: URL = URL(string: "https://preppilot-official-dockersetup.onrender.com/api")!) {
         self.baseURL = baseURL
     }
 
@@ -664,7 +672,7 @@ struct BackendStudyAIService: StudyAIProviding {
     }
 
     func answer(question: String, noteContext: String) async throws -> AIAnswer {
-        try await post("chat", body: ChatRequest(question: question, noteContext: noteContext))
+        try await post("answer", body: ChatRequest(question: question, noteContext: noteContext))
     }
 
     private func post<RequestBody: Encodable, ResponseBody: Decodable>(_ endpoint: String, body: RequestBody) async throws -> ResponseBody {
@@ -672,6 +680,9 @@ struct BackendStudyAIService: StudyAIProviding {
         request.httpMethod = "POST"
         request.timeoutInterval = 120
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Bearer \(Secrets.clientAPIKey)", forHTTPHeaderField: "Authorization")
+        request.setValue(Secrets.clientAPIKey, forHTTPHeaderField: "X-API-Key")
         request.httpBody = try encoder.encode(body)
 
         let (data, response) = try await URLSession.shared.data(for: request)
