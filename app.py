@@ -4,12 +4,11 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-# Accept either APP_API_KEY or CLIENT_API_KEY to match your Render env var name
+# Accept either APP_API_KEY or CLIENT_API_KEY (set this in Render -> Environment)
 APP_API_KEY = (os.getenv("APP_API_KEY") or os.getenv("CLIENT_API_KEY") or "").strip()
 
 def authorized(req: Request) -> bool:
     if not APP_API_KEY:
-        # Allow all if no key is set (useful for quick smoke tests)
         return True
     auth = req.headers.get("authorization", "")
     xkey = req.headers.get("x-api-key", "")
